@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xaviours - Luxury Clothing</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/0a2a520a6b.js" crossorigin="anonymous"></script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="Xaviours.css">
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand brand-font fw-bold" href="#">
+      <i class="fa-solid fa-crown"></i> Xaviours
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        
+        <li class="nav-item">
+          <button class="btn btn-outline-light btn-sm ms-lg-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-warning btn-sm ms-lg-2" data-bs-toggle="modal" data-bs-target="#cartModal">Cart (<span id="cartCount">0</span>)</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="images/clothing-1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-white">
+        <h5>Men's Section</h5>
+        <p>Timeless menswear crafted with precision — clean silhouettes, premium fabrics, and everyday essentials built for confidence and comfort.</p>
+        <a href="#MEN" class="btn btn-warning">Shop Now</a>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="images/clothing-2.avif" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block text-white">
+        <h5>Women's Section</h5>
+        <p>Elegant women’s fashion designed to empower — refined styles, modern cuts, and effortless pieces made for every moment.</p>
+         <a href="#WOMEN" class="btn btn-warning">Shop Now</a>     
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Men's Collection -->
+<section class="Men-Collection" id="MEN">
+  <div class="container" id="collection">
+    <h2 class="text-center brand-font my-5 disable-text">Men's Collection</h2>
+
+    <div class="row gap-5" id="productList">
+      
+      <div class="card product" style="width: 18rem;">
+        <img src="images/denim-shirt.jpg" class="card-img-top" alt="Classic Denim Jacket">
+        <div class="card-body">
+          <h5 class="card-title">Classic Denim Jacket</h5>
+          <span class="price-tag">₹2,999</span>
+          <p class="card-text">A rugged yet refined denim jacket designed for everyday wear, blending timeless style with durable comfort.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card product" style="width: 18rem;">
+        <img src="images/cotton-shirt.jpg" class="card-img-top" alt="Premium Cotton Shirt">
+        <div class="card-body">
+          <h5 class="card-title">Premium Cotton Shirt</h5>
+          <span class="price-tag">₹1,499</span>
+          <p class="card-text">Tailored for a sharp look, this breathable cotton shirt delivers comfort, class, and all-day versatility.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card product" style="width: 18rem;">
+        <img src="images/denim-jeans.jpg" class="card-img-top" alt="Slim Fit Denim Jeans">
+        <div class="card-body">
+          <h5 class="card-title">Slim Fit Denim Jeans</h5>
+          <span class="price-tag">₹1,999</span>
+          <p class="card-text">Modern slim-fit jeans crafted for a clean silhouette, combining stretch comfort with everyday durability.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card product" style="width: 18rem;">
+        <img src="images/sneakers.jpg" class="card-img-top" alt="Urban Casual Sneakers">
+        <div class="card-body">
+          <h5 class="card-title">Urban Casual Sneakers</h5>
+          <span class="price-tag">₹2,499</span>
+          <p class="card-text">Minimalist sneakers built for daily movement, offering lightweight support with a sharp urban edge.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  
+  </div>
+</section>
+
+<!-- Women's Collection -->
+ <section class="Women-Collection" id="WOMEN">
+  <div class="container" id="collection">
+    <h2 class="text-center brand-font my-5 disable-text">Women's Collection</h2>
+
+    <div class="row gap-5" id="productList">
+      
+      <div class="card product-2" style="width: 18rem;">
+        <img src="images/flogant-dress.jpg" class="card-img-top" alt="Elegant Floral Dress">
+        <div class="card-body">
+          <h5 class="card-title">Elegant Floral Dress</h5>
+          <span class="price-tag-w">₹2,799</span>
+          <p class="card-text">A graceful floral dress crafted for effortless elegance, perfect for both daytime charm and evening style.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card product-2" style="width: 18rem;">
+        <img src="images/casual-top.jpg" class="card-img-top" alt="Chic Casual Top">
+        <div class="card-body">
+          <h5 class="card-title">Chic Casual Top</h5>
+          <span class="price-tag-w">₹1,299</span>
+          <p class="card-text">A modern casual top designed with a flattering fit, combining comfort and contemporary fashion.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card product-2" style="width: 18rem;">
+        <img src="images/denim-jeans-w.jpg" class="card-img-top" alt="High-Rise Denim Jeans">
+        <div class="card-body">
+          <h5 class="card-title">High-Rise Denim Jeans</h5>
+          <span class="price-tag-w">₹1,899</span>
+          <p class="card-text">Stylish high-rise jeans offering a sleek silhouette, stretch comfort, and everyday versatility.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card product-2" style="width: 18rem;">
+        <img src="images/heels.jpg" class="card-img-top" alt="Classic Block Heels">
+        <div class="card-body">
+          <h5 class="card-title">Classic Block Heels</h5>
+          <span class="price-tag-w">₹2,299</span>
+          <p class="card-text">Elegant block heels built for stability and style, delivering confidence with every step.</p>
+          <button class="btn btn-primary" onclick="added()">Add to Cart</button>
+        </div>
+      </div>
+
+
+    </div>
+  
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="py-4 text-center bg-dark text-white">
+  <div class="container">
+    <h5 class="brand-font">Xaviours</h5>
+    <p class="mb-1">Timeless Luxury Clothing</p>
+    <small>© 2025 Xaviours</small>
+  </div>
+</footer>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header border-0 bg-dark text-white">
+        <h5 class="modal-title brand-font">
+          <i class="fa-solid fa-crown me-2"></i>Member Login
+        </h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-5">
+        <form>
+          <div class="mb-4">
+            <label class="form-label fw-500">Email Address</label>
+            <input type="email" class="form-control form-control-lg" placeholder="you@gmail.com" required>
+            <small class="text-muted">We'll never share your email.</small>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-500">Password</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Enter your password" required>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="rememberMe">
+            <label class="form-check-label" for="rememberMe">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 fw-bold py-2 mb-3">Login</button>
+          <p class="text-center text-muted small">Don't have an account? <a href="#" class="text-warning text-decoration-none" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Signup Modal -->
+<div class="modal fade" id="signupModal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg">
+      <div class="modal-header border-0 bg-dark text-white">
+        <h5 class="modal-title brand-font">
+          <i class="fa-solid fa-crown me-2"></i>Create Account
+        </h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-5">
+        <form>
+          <div class="mb-4">
+            <label class="form-label fw-500">Full Name</label>
+            <input type="text" class="form-control form-control-lg" placeholder="Your full name" required>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-500">Email Address</label>
+            <input type="email" class="form-control form-control-lg" placeholder="you@gmail.com" required>
+            <small class="text-muted">We'll never share your email.</small>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-500">Password</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Create a password" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label fw-500">Confirm Password</label>
+            <input type="password" class="form-control form-control-lg" placeholder="Confirm your password" required>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+            <label class="form-check-label" for="agreeTerms">I agree to the terms and conditions</label>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 fw-bold py-2 mb-3">Sign Up</button>
+          <p class="text-center text-muted small">Already have an account? <a href="#" class="text-warning text-decoration-none" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title brand-font">Your Cart</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group mb-3" id="cartItems"></ul>
+        <h5 class="text-end">Total: ₹<span id="cartTotal">0</span></h5>
+        <button class="btn btn-warning w-100 mt-3">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Custom JS -->
+<script src="Xaviours.js"></script>
+
+</html>

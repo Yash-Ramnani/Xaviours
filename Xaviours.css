@@ -1,0 +1,114 @@
+/* Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.brand-font {
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* Carousel Images */
+.carousel-item img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Section */
+.Men-Collection {
+  padding: 50px 0;
+  background-color: #212529;
+  color: white;
+}
+
+.product {
+  text-align: center;
+  background: linear-gradient(rgba(12, 227, 255, 0.269), #f8f9fa);;
+  transition: 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product img,.product-2 img {
+  height: 300px;
+  width: 109%;
+  margin-left: -4%;
+  object-fit: cover;
+}
+
+/* Section-2 */
+.Women-Collection {
+  padding: 50px 0;
+  background-color: white;
+  color: #212529;
+}
+
+.product-2 {
+  text-align: center;
+  background: linear-gradient(rgba(255, 7, 131, 0.468), #f8f9fa);
+  transition: 0.3s ease;
+}
+
+.product-2:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   Price Tag Styling
+================================ */
+
+.price-tag {
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111;
+  background-color: black;
+  background: linear-gradient(135deg, #23f9f279, #22ccffbb);
+  border-radius: 20px;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-tag-w {
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #111;
+  background-color: black;
+  background: linear-gradient(135deg, #f747bc79, #e572ffbb);
+  border-radius: 20px;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover polish */
+.card:hover .price-tag {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Footer */
+footer {
+  background-color: #111;
+}
+
+footer p {
+  color: #ccc;
+}
+
+.disable-text {
+  user-select: none;
+}
